@@ -14,13 +14,29 @@ namespace BibliotecaScolastica
         public string Editore { get; set; } 
         public int NumeroPagine { get; set; }
 
-        public int redingTime(int paginePerOra)
+        public string readingTime;
+        public string RedingTime()
         {
-            if (paginePerOra <= 0)
+            if (NumeroPagine <= 0)
             {
-                throw new ArgumentException("Il numero di pagine per ora deve essere maggiore di zero.");
+                throw new ArgumentException("Il numero di pagine deve essere maggiore di zero.");
             }
-            return NumeroPagine / paginePerOra;
+            else if(NumeroPagine < 100 && NumeroPagine > 0)
+            {
+
+                return readingTime = "Il libro richiede 1h di lettura";
+            }
+            else if(NumeroPagine >= 100 && NumeroPagine <= 200)
+            {
+                return readingTime = "Il libro richiede 2 ore di lettura";
+            }
+            else
+            {
+                return readingTime = "Il libro richiede oltre 2 ore di lettura";
+                
+
+            }
+
         }
 
 
