@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using BibliotecaScolastica;
 
 namespace BibliotecaScolastica
 {
@@ -11,8 +14,9 @@ namespace BibliotecaScolastica
         static void Main(string[] args)
         {
             Console.WriteLine("Benvenuti nella Biblioteca Scolastica!");
-           
+            Console.WriteLine("Inserisci editore");
             Console.ReadLine();
+            
 
             Biblioteca miaBiblioteca = new Biblioteca("Biblioteca Centrale", "Via Roma 1", "9:00 - 18:00", "18:00");
             Libro libro1 = new Libro("Il Postino Pat", "Gian Piero", "Colibrì");
@@ -23,7 +27,7 @@ namespace BibliotecaScolastica
             miaBiblioteca.Libri.Add(libro2);
             Console.WriteLine($"Libro Aggiunto: {libro2.Titolo} di {libro2.Autore}, editore: {libro2.Editore}");
             Console.ReadLine();
-            Libro libro3 = new Libro(
+           
                     
             Libro libro3 = new Libro(
                 "To Kill a Mockingbird",

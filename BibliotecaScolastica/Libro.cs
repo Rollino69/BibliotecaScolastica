@@ -15,6 +15,11 @@ namespace BibliotecaScolastica
         public int NumeroPagine { get; set; }
 
         public string readingTime;
+
+        public Libro(string v1, string v2, string v3)
+        {
+        }
+
         public string RedingTime()
         {
             if (NumeroPagine <= 0)
